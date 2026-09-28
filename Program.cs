@@ -10,6 +10,8 @@ class Program
         Random random = new Random();
         int secretNumber = random.Next(1, 101);
         int guess = 0;
+        //Om du vill kan du hålla reda på hur många försök det tar för användaren
+        //att gissa rätt antal.
         int attempts = 0;
 
         while (guess != secretNumber)
@@ -17,6 +19,7 @@ class Program
             // • Be användaren att gissa numret.
             Console.WriteLine("Please enter a guess between 1-100:");
             guess = int.Parse(Console.ReadLine()!);
+            //Attempts räknas upp för varje fel gissning
             attempts++;
 
             // • Använd en while-loop för att fortsätta be om gissningar tills användaren
